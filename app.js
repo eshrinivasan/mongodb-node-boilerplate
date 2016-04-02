@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 require('./models/Posts');
 require('./models/Comments');
-mongoose.connect('mongodb://localhost/flappernews');
+mongoose.connect('mongodb://127.0.0.1:2701/flappernews');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
