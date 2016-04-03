@@ -116,11 +116,11 @@ input[type=text]:focus:not([readonly]){
     
     .wrapper{
       min-height: 100%;
-      margin: 0 auto -71px;
+      margin: 0 auto -110px;
     }
 
     .footer{
-      height: 71px;
+      height: 11px;
     }
 
 }
