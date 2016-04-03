@@ -127,3 +127,8 @@ input[type=text]:focus:not([readonly]){
     }
 
 }
+
+#toast-container {
+    top: 0px !important;
+    left: 0px !important;
+}
