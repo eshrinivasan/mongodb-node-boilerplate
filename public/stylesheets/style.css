@@ -1,28 +1,30 @@
+ html {
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+  }
+
 body {
   padding: 5px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background:#fcfcfc;
   -webkit-transition: background-color 1000ms linear;
-    -moz-transition: background-color 1000ms linear;
-    -o-transition: background-color 1000ms linear;
-    -ms-transition: background-color 1000ms linear;
-    transition: background-color 1000ms linear;
+  -moz-transition: background-color 1000ms linear;
+  -o-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
 }
 
 a {
-  color: #00B7FF;
+  color: #01579b;
 }
 
 body.switchon{
   background:#212121;
   color:#fff;
-
-
-    -webkit-transition: background-color 1000ms linear;
-    -moz-transition: background-color 1000ms linear;
-    -o-transition: background-color 1000ms linear;
-    -ms-transition: background-color 1000ms linear;
-    transition: background-color 1000ms linear;
+  -webkit-transition: background-color 1000ms linear;
+  -moz-transition: background-color 1000ms linear;
+  -o-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
 }
 
 body.switchon .card-panel{
@@ -31,9 +33,9 @@ body.switchon .card-panel{
 
 
 .wrapper{
-      min-height: 100%;
-      margin: 0 auto 0px;
-    }
+  min-height: 100%;
+  margin: 0 auto 0px;
+}
 
 .footer{
   height: 71px;
@@ -44,12 +46,10 @@ body.switchon .card-panel{
 }
 
 .chip{
-  background:#eceff1;
   font-weight: bold;
 }
 
 .chip.prominent{
-  background:#e1f5fe ;
   font-weight: normal;
 }
 
@@ -97,10 +97,23 @@ body.switchon .card-panel{
 
 form { position:relative; bottom: 0; width: 100%;}
 
+.btn,
+.switch label input[type=checkbox]:checked+.lever,
+.switch label input[type=checkbox]:checked+.lever:after
+{
+  background-color:#039be5;
+}
+
+input[type=text]:focus:not([readonly]){
+      border-bottom: 1px solid #039be5;
+    box-shadow: 0 1px 0 0 #039be5;
+}
+
+
 /* Portrait and Landscape */
 @media only screen 
   and (min-width: 960px) {
-  	
+    
     .wrapper{
       min-height: 100%;
       margin: 0 auto -71px;
