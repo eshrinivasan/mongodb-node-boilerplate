@@ -115,15 +115,29 @@ input[type=text]:focus:not([readonly]){
 
 /* Portrait and Landscape */
 @media only screen 
+  and (min-width: 768px) {
+    
+    .wrapper{
+      min-height: 100%;
+      margin: 0 auto -54px;
+    }
+
+    .footer{
+      height: 54px;
+    }
+
+}
+
+media only screen 
   and (min-width: 960px) {
     
     .wrapper{
       min-height: 100%;
-      margin: 0 auto -110px;
+      margin: 0 auto -88px;
     }
 
     .footer{
-      height: 11px;
+      height: 88px;
     }
 
 }
