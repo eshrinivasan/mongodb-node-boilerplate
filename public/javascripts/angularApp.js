@@ -18,8 +18,17 @@ app.config([
                     }]
                 }
             })
-
             .state('posts', {
+                url: '/posts',
+                templateUrl: '/posts.html',
+                controller: 'MainCtrl',
+                resolve: {
+                    postPromise: ['postRepository', function(postRepository){
+                        return postRepository.getAll();
+                    }]
+                }
+            })
+            .state('postsdetail', { //originally 'posts'
                 url: '/posts/{id}',
                 templateUrl: '/posts.html',
                 controller: 'PostsCtrl',
@@ -43,6 +52,10 @@ app.factory('postRepository', ['$http', function($http){
         return $http.get('/posts/' + id).then(function(res){
             return res.data;
         });
+    };
+
+    o.getPosts = function() {
+        return $http.get('/posts');
     };
 
     o.getAll = function() {
@@ -102,6 +115,8 @@ app.controller('MainCtrl', [
 
     }
 ]);
+
+
 
 app.controller('PostsCtrl', [
     '$scope',
