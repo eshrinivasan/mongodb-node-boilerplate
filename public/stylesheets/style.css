@@ -31,6 +31,10 @@ body.switchon .card-panel{
   font-weight: normal;
 }
 
+.flow-text{
+  line-height:1.5em;
+}
+
 
 .demo p {
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
