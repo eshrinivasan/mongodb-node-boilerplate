@@ -47,13 +47,36 @@
       </script>
 
     <script type="text/ng-template" id="/home.html">
+     <!-- Switch -->
+      <div class="switch right-align">
+        <label>
+          Day
+          <input type="checkbox" id="switcher"  onclick="checkState(this)">
+          <span class="lever"></span>
+          Night
+        </label>
+      </div>
 
       <div class="demo card-panel">
-        <div class="chip">
-          <img src="/stylesheets/neel.jpg" alt="Contact Person">
+        <div class="chip prominent">
+          <a href="https://www.linkedin.com/in/shrinivasan-neelamegam-0716917" target="_blank"><img src="/stylesheets/neel.jpg" alt="Contact Person">
             Shrinivasan Neelamegam
+            </a>
         </div>
-        <p class="flow-text">I am a web developer with deep knowledge of HTML, CSS, Javascript. I have extensive hands on experience with Object Oriented Javascript, Responsive web design, Javascript libraries and frameworks like AngularJS. I’m proficient in creating features, functional components, reusable widgets for a wide variety of business applications using web technologies. In addition to creating reusable components, I also focus on making performance enhancements, track metrics using google analytics, make the products compatible with mobile, tablet devices. I have worked with different content management platforms including Drupal. I’m currently working on developing single page applications using AngularJS, JSON, Node.js. Feel free to contact me by sending a message below</p>
+        <p class="flow-text">I am a web developer with deep knowledge of HTML, CSS, Javascript. I have extensive hands on experience with Object Oriented Javascript, Responsive web design, Javascript libraries and frameworks like AngularJS. I’m proficient in creating features, functional components, reusable widgets for a wide variety of business applications using web technologies. In addition to creating reusable components, I also focus on making performance enhancements, track metrics using google analytics, make the products compatible with mobile, tablet devices. I have experience working with different content management platforms including Drupal. I’m currently working on developing single page applications using AngularJS, JSON, Node.js.</p>
+
+          <div class="chip">Javascript</div>
+          <div class="chip">AngularJS</div>
+          <div class="chip">jQuery</div>
+          <div class="chip">HTML</div>
+          <div class="chip">CSS/SASS</div>
+          <div class="chip">JSON</div>
+          <div class="chip">Grunt</div>
+
+          <div class="right">
+            
+          </div>
+          <p class="flow-text"> Feel free to contact me by sending a message below!</p>
       </div>
 
         <form ng-submit="addPost()">
@@ -62,7 +85,7 @@
                 <input type="text"
                        class="form-control"
                        placeholder="Message"
-                       ng-model="title"></input>
+                       ng-model="title" autofocus></input>
             </div>
             
             <div class="col s12 m2">
@@ -77,10 +100,19 @@
            
     </script>
     <script>
+
+    function checkState(checkbox){
+        if(checkbox.checked){
+          document.getElementsByTagName("body")[0].className += " switchon";
+        }else{
+          document.body.className = document.body.className.replace("switchon","");
+        }
+    }
+
     $(function () {
-             $('.demo')
-              .textillate({ in: { effect: 'flipInY' }});
-           });
+            // $('.demo').find('flow-text').delay(1000).animate({opacity:1}, 700);
+              //.textillate({ in: { effect: 'flipInY' }});
+     });
     </script>
 </body>
 </html>
